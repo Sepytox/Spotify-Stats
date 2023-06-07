@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Stats</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="stylesheet.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Spotify Stats</h1>
+  
+  <label for="song-input">Song:</label>
+  <br>
+  <input type="text" id="song-input">
+  <br>
+  <button onclick="searchSong()">Search</button>
+  
+  <br><br>
+  
+  <label for="user-input">User:</label>
+  <br>
+  <input type="text" id="user-input">
+  <br>
+  <button onclick="searchUser()">Search</button>
+  
+  <br><br>
+  
+  <label for="artist-input">Artist:</label>
+  <br>
+  <input type="text" id="artist-input">
+  <br>
+  <button onclick="searchArtist()">Search</button>
+  
+  <div id="result"></div>
+
+  <script>
+    function searchSong() {
+      var songName = document.getElementById("song-input").value;
+      // Führe hier den API-Aufruf durch, um den Song zu suchen und die Ergebnisse anzuzeigen
+      // Beispiel: $.get("https://api.spotify.com/v1/search?q=" + songName + "&type=track", function(data) { ... });
+    }
+    
+    function searchUser() {
+      var userName = document.getElementById("user-input").value;
+      // Führe hier den API-Aufruf durch, um den Benutzer zu suchen und die Ergebnisse anzuzeigen
+      // Beispiel: $.get("https://api.spotify.com/v1/search?q=" + userName + "&type=user", function(data) { ... });
+    }
+    
+    function searchArtist() {
+      var artistName = document.getElementById("artist-input").value;
+      // Führe hier den API-Aufruf durch, um den Künstler zu suchen und die Ergebnisse anzuzeigen
+      // Beispiel: $.get("https://api.spotify.com/v1/search?q=" + artistName + "&type=artist", function(data) { ... });
+    }
+  </script>
+</body>
+</html>
